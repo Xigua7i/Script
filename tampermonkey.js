@@ -6,8 +6,6 @@
 // @author       You
 // @match        https://www.google.com/*
 // @match        https://mapgenie.io/*
-// @includ       https://www.google.com/*
-// @includ        https://mapgenie.io/*
 // @grant        none
 // @author       Korey
 // @license MIT
@@ -29,10 +27,15 @@
 
     function deleteMapGenieAdsFloating() {
         if (window.location.hostname.includes('mapgenie.io')) {
-            console.log('deleteMapGenieAdsFloating');
+            // 移除左下脚广告
             const adsElement = document.getElementById("blobby-left");
             if (adsElement) {
                 adsElement.remove();
+            }
+            // 移除视频动画广告
+            const videoElement = document.getElementById("nitro-floating-wrapper");
+            if (videoElement) {
+                videoElement.remove();
             }
         }
     }
