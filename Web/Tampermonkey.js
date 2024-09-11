@@ -11,7 +11,6 @@
 // @author       Korey
 // @license MIT
 // ==/UserScript==
-
 (function () {
     'use strict';
 
